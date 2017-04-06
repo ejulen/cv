@@ -1,0 +1,45 @@
+doctype
+- const data = require(`./languages/${htmlWebpackPlugin.options.language}`)
+- const marked = require('marked')
+- const format = htmlWebpackPlugin.options.format
+html
+    head
+        title CV
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        meta(charset='utf8')
+        script.
+            window.data = !{JSON.stringify(data)}
+    body
+        main.cv
+            header.header
+                .header__photo
+                    img(src=require('./images/me.jpeg'))
+                .header__details
+                    h1.header__name= data.name
+                    p.header__email: a.link(href=`mailto:${data.email}`)= data.email
+                    p.header__phone-number: a.link(href=`tel:${data.phoneNumber}`)= data.phoneNumber
+                    p.header__location= data.location
+            section.cv-section
+                h2.cv-section__title= data.skills.title
+                .cv-section__contents
+                    ul.skills
+                        each skill in data.skills.list
+                            li.skills__item= skill
+            section.cv-section
+                h2.cv-section__title= data.experience.title
+                .cv-section__contents
+                    each experience in data.experience.list
+                        .info-item
+                            h3.info-item__title= experience.title
+                            small.info-item__dates #{format(experience.start, 'MMM YYYY')} - #{experience.end ? format(experience.end, 'MMM YYYY') : data.present}
+                            .info-item__description!= marked(experience.description)
+                            .info-item__tags
+                                each tag in experience.tags.sort()
+                                    span.info-item__tag= tag
+            section.cv-section
+                h2.cv-section__title= data.education.title
+                .cv-section__contents
+                    each education in data.education.list
+                        .info-item
+                            h3.info-item__title= education.title
+                            small.info-item__dates #{education.school}, #{format(education.start, 'YYYY')} - #{format(education.end, 'YYYY')}

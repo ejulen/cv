@@ -1,0 +1,17 @@
+.info-item__title {
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.info-item__dates {
+    color: #546E7A;
+}
+
+.info-item__tag {
+    background-color: #B0BEC5;
+    padding: 5px;
+    margin-right: 5px;
+    text-transform: lowercase;
+    font-size: 12px;
+}
