@@ -13,7 +13,11 @@ module.exports = {
             'Webpack',
             'Ruby',
             'Python',
-            'Git'
+            'Git',
+            'Java',
+            'Angular',
+            'SQL',
+            'C#'
         ]
     },
     experience: {
