@@ -35,7 +35,7 @@ module.exports = {
     education: {
         list: [
             {
-                start: new Date('2013'),
+                start: new Date('2012'),
                 end: new Date('2015')
             }
         ]
