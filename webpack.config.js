@@ -2,19 +2,22 @@ const path = require('path')
 const HtmlPlugin = require('html-webpack-plugin')
 const CleanPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const imageDimensions = require('image-size')(path.resolve(__dirname, 'src/images/me.jpeg'))
 
-function cv (language, path) {
+function cv (language, url) {
     const locale = require(`date-fns/locale/${language}`)
     const formatDate = require('date-fns/format')
     return new HtmlPlugin({
         template: './template.pug',
-        filename: path,
+        filename: url,
         language,
         format: (date, format, options) => {
             return formatDate(date, format, Object.assign({
                 locale
             }, options))
-        }
+        },
+        url: url.indexOf('/') >= 0 ? (path.dirname(url) + '/') : '',
+        imageDimensions
     })
 }
 

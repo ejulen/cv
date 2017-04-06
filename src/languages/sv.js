@@ -2,6 +2,8 @@ const common = require('./common')
 const merge = require('deepmerge')
 
 module.exports = merge(common, {
+    title: 'Johannes Uléns CV',
+    description: 'Utvecklare som brinner för utveckling och att lära sig nya saker.',
     skills: {
         title: 'Kunskaper'
     },
