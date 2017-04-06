@@ -26,7 +26,7 @@ module.exports = {
                 title: 'Rabalder Media',
                 start: new Date('2016-04'),
                 end: false,
-                tags: ['JavaScript', 'React', 'Webpack', 'Sass', 'PostCSS', 'Heroku', 'S3', 'Netlify']
+                tags: ['JavaScript', 'React', 'Webpack', 'Sass', 'PostCSS', 'Heroku', 'S3', 'Netlify', 'Meteor', 'WordPress', 'CloudFlare', 'MongoDB', 'PostgreSQL', 'Node.js']
             },
             {
                 title: 'CGI',
