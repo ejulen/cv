@@ -11,6 +11,10 @@ module.exports = merge(common, {
         title: 'Erfarenhet',
         list: [
             {
+                title: 'Pingdom',
+                description: `Mestadels backendutveckling med fokus på Node.js, Python, PHP och Go i olika delar av Pingdoms produkter.`
+            },
+            {
                 title: 'Rabalder Media',
                 description: 'Webbutveckling med moderna verktyg och språk. Mestadels front-end (hostad på bland annat Netlify), men även en hel del back-end på egen infrastruktur samt på PaaS-system som Heroku.'
             },
@@ -29,7 +33,7 @@ module.exports = merge(common, {
             }
         ]
     },
-    location: 'Härnösand',
+    location: 'Västerås',
     present: 'nu',
     email: 'kontakt@johannesulen.se',
     phoneNumber: '0738370791',

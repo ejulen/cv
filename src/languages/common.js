@@ -1,7 +1,7 @@
 module.exports = {
     name: 'Johannes Ulén',
     phoneNumber: '+46738370791',
-    email: 'kaerigan@gmail.com',
+    email: 'contact@johannesulen.se',
     skills: {
         list: [
             'JavaScript',
@@ -23,9 +23,15 @@ module.exports = {
     experience: {
         list: [
             {
+                title: 'Pingdom',
+                start: new Date('2017-05'),
+                end: false,
+                tags: ['JavaScript', 'Python', 'Go', 'MySQL', 'Node.js', 'Mithril', 'PHP']
+            },
+            {
                 title: 'Rabalder Media',
                 start: new Date('2016-04'),
-                end: false,
+                end: new Date('2017-05'),
                 tags: ['JavaScript', 'React', 'Webpack', 'Sass', 'PostCSS', 'Heroku', 'S3', 'Netlify', 'Meteor', 'WordPress', 'CloudFlare', 'MongoDB', 'PostgreSQL', 'Node.js']
             },
             {
