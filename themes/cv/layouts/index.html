@@ -1,0 +1,42 @@
+{{ define "main" }}
+  <div class="info">
+    <img class="photo" alt="{{ .Params.photo.alt }}" src="{{ .Params.photo.url }}" />
+    <h1 class="name">{{ .Params.name }}</h1>
+    <ul class="details">
+      <li class="detail"><span class="icon">📧</span><a href="mailto:{{ .Params.emailAddress }}">{{ .Params.emailAddress }}</a></li>
+      <li class="detail"><span class="icon">📱</span><a href="tel:{{ .Params.phoneNumber }}">{{ .Params.phoneNumber }}</a></li>
+      <li class="detail"><span class="icon">🌍</span>{{ .Params.location }}</li>
+    </ul>
+  </div>
+  <h2>{{ .Params.sections.skills }}</h2>
+  <section>
+    <ul class="skills">
+      {{ range .Params.skills }}
+      <li class="skill">{{ .title }}</li>
+      {{ end }}
+    </ul>
+  </section>
+  <h2>{{ .Params.sections.experience }}</h2>
+  <section>
+    {{ range .Params.jobs }}
+      <h3>{{ .title }} 
+        <sup class="period">
+          {{ .startDate }} - {{ .endDate }}
+        </sup>
+      </h3>
+      <p>{{ .description }}</h2>
+      <ul class="tags">
+        {{ range .tags }}
+          <li class="tag">{{ .title }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </section>
+  <h2> {{ .Params.sections.education }}</h2>
+  <section>
+    {{ range .Params.education }}
+      <h3>{{ .title }} <sup class="period">{{ .startYear }} - {{ .endYear }}</sup></h3>
+      <div class="education-place">{{ .place }}</div>
+    {{ end }}
+  </section>
+{{ end }}
